@@ -9,7 +9,8 @@ zsh -c "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH
 zsh -c "git clone https://github.com/denysdovhan/spaceship-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt --depth=1"
 zsh -c "ln -s ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
 
+python -m ensurepip --upgrade
 pip3 install -r dotdrop/requirements.txt --user
 
 dotdrop/bootstrap.sh
-./dotdrop.sh install -p "$1" -f
+./dotdrop.sh install -p "fell-pc" -f
