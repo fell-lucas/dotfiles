@@ -1,9 +1,9 @@
 [submodule "dotdrop"]
 	path = dotdrop
-	url = git@github.com:deadc0de6/dotdrop.git
+	url = https://github.com/deadc0de6/dotdrop.git
 [submodule "dotfiles/config/awesome/awesome-buttons"]
 	path = dotfiles/config/awesome/awesome-buttons
-	url = git@github.com:streetturtle/awesome-buttons
+	url = https://github.com/streetturtle/awesome-buttons.git
 [submodule "dotfiles/config/awesome/awesome-wm-widgets"]
 	path = dotfiles/config/awesome/awesome-wm-widgets
-	url = git@github.com:streetturtle/awesome-wm-widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets.git
