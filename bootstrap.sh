@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-git clone --recurse-submodules git@github.com:fell-lucas/dotfiles.git
+# git clone --recurse-submodules git@github.com:fell-lucas/dotfiles.git
 
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 
