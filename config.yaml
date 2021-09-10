@@ -1,0 +1,63 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+    link: link
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+    link: link
+  d_mpv:
+    src: config/mpv
+    dst: ~/.config/mpv
+    link: link_children
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
+    link: link_children
+  d_config_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+    link: link_children
+  d_config_picom:
+    src: config/picom
+    dst: ~/.config/picom
+    link: link_children
+  d_dribbblish:
+    src: config/spicetify/Themes/Dribbblish
+    dst: ~/.config/spicetify/Themes/Dribbblish
+    link: link_children
+  d_paru:
+    src: config/paru
+    dst: ~/.config/paru
+    link: link_children
+  d_awesome:
+    src: config/awesome
+    dst: ~/.config/awesome
+    link: link_children
+  d_stable:
+    src: config/BetterDiscord/data/stable
+    dst: ~/.config/BetterDiscord/data/stable
+    link: link_children
+  d_redshift:
+    src: config/redshift
+    dst: ~/.config/redshift
+    link: link_children
+profiles:
+  fell-pc:
+    dotfiles:
+    - f_gitconfig
+    - f_zshrc
+    - d_mpv
+    - d_kitty
+    - d_config_rofi
+    - d_config_picom
+    - d_dribbblish
+    - d_paru
+    - d_awesome
+    - d_stable
+    - d_redshift
