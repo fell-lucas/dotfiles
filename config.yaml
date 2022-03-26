@@ -27,21 +27,9 @@ dotfiles:
     src: config/picom
     dst: ~/.config/picom
     link: link_children
-  d_dribbblish:
-    src: config/spicetify/Themes/Dribbblish
-    dst: ~/.config/spicetify/Themes/Dribbblish
-    link: link_children
   d_paru:
     src: config/paru
     dst: ~/.config/paru
-    link: link_children
-  d_awesome:
-    src: config/awesome
-    dst: ~/.config/awesome
-    link: link_children
-  d_stable:
-    src: config/BetterDiscord/data/stable
-    dst: ~/.config/BetterDiscord/data/stable
     link: link_children
   d_redshift:
     src: config/redshift
@@ -56,8 +44,5 @@ profiles:
     - d_kitty
     - d_config_rofi
     - d_config_picom
-    - d_dribbblish
     - d_paru
-    - d_awesome
-    - d_stable
     - d_redshift

@@ -1,27 +1,27 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # ohmyzsh config
 export ZSH="/home/fell/.oh-my-zsh"
-ZSH_THEME="spaceship"
-SPACESHIP_USER_SHOW="always"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   # alias-finder
-  composer
   docker
   docker-compose
   git
   # git-flow
   # gpg-agent
   # keychain
-  # laravel
   npm
   # nvm
-  # mvn
-  # vscode
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -30,14 +30,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
-alias sail="bash vendor/bin/sail"
-alias dotdrop='/home/lucas/Repos/dotfiles/dotdrop.sh --cfg=/home/lucas/Repos/dotfiles/config.yaml'
 alias perf_mode='echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias save_mode='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias cpu_watch='watch -n.5 "cat /proc/cpuinfo | grep \"^[c]pu MHz\" && sensors"'
-alias rclua='code ~/.config/awesome/'
-alias .config='code ~/.config'
-# alias spicetify='~/spicetify-cli/spicetify'
 alias l='ls -latr'
 alias paru='paru --skipreview'
 
@@ -45,5 +40,5 @@ export GPG_TTY=$TTY
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
-# export ANDROID_SDK_ROOT="/home/lucas/AndroidSDK/"
-# export PATH="$PATH":"$HOME/.pub-cache/bin"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
