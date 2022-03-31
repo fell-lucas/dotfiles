@@ -39,7 +39,11 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
-    link: link_children 
+    link: link_children
+  d_fontconfig:
+    src: config/fontconfig
+    dst: ~/.config/fontconfig
+    link: link
 profiles:
   fell:
     dotfiles:
@@ -52,3 +56,4 @@ profiles:
     - d_paru
     - d_redshift
     - d_nvim
+    - d_fontconfig
