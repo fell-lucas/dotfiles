@@ -36,10 +36,6 @@ dotfiles:
     src: config/redshift
     dst: ~/.config/redshift
     link: link_children
-  d_nvim:
-    src: config/nvim
-    dst: ~/.config/nvim
-    link: link_children
   d_fontconfig:
     src: config/fontconfig
     dst: ~/.config/fontconfig
@@ -59,6 +55,5 @@ profiles:
     - d_config_picom
     - d_paru
     - d_redshift
-    - d_nvim
     - d_fontconfig
     - f_p10k.zsh
