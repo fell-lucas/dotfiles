@@ -44,6 +44,10 @@ dotfiles:
     src: config/fontconfig
     dst: ~/.config/fontconfig
     link: link
+  f_p10k.zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
+    link: link
 profiles:
   fell:
     dotfiles:
@@ -57,3 +61,4 @@ profiles:
     - d_redshift
     - d_nvim
     - d_fontconfig
+    - f_p10k.zsh
