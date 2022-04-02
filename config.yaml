@@ -44,6 +44,10 @@ dotfiles:
     src: p10k.zsh
     dst: ~/.p10k.zsh
     link: link
+  f_config.lua:
+    src: config/lvim/config.lua
+    dst: ~/.config/lvim/config.lua
+    link: link
 profiles:
   fell:
     dotfiles:
@@ -57,3 +61,4 @@ profiles:
     - d_redshift
     - d_fontconfig
     - f_p10k.zsh
+    - f_config.lua
