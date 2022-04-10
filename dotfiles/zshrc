@@ -22,7 +22,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # ohmyzsh config
-export ZSH="/home/fell/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   # alias-finder
