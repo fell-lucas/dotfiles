@@ -48,6 +48,10 @@ dotfiles:
     src: config/lvim/config.lua
     dst: ~/.config/lvim/config.lua
     link: link
+  f_tmux.conf:
+    src: byobu/.tmux.conf
+    dst: ~/.byobu/.tmux.conf
+    link: link
 profiles:
   fell:
     dotfiles:
@@ -62,3 +66,4 @@ profiles:
     - d_fontconfig
     - f_p10k.zsh
     - f_config.lua
+    - f_tmux.conf
