@@ -52,6 +52,14 @@ dotfiles:
     src: byobu/.tmux.conf
     dst: ~/.byobu/.tmux.conf
     link: link
+  f_config:
+    src: ssh/config
+    dst: ~/.ssh/config
+    link: link
+  f_ksnip.conf:
+    src: config/ksnip/ksnip.conf
+    dst: ~/.config/ksnip/ksnip.conf
+    link: link
 profiles:
   fell:
     dotfiles:
@@ -67,3 +75,5 @@ profiles:
     - f_p10k.zsh
     - f_config.lua
     - f_tmux.conf
+    - f_config
+    - f_ksnip.conf
