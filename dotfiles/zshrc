@@ -48,6 +48,24 @@ alias cpu_watch='watch -n.5 "cat /proc/cpuinfo | grep \"^[c]pu MHz\" && sensors"
 alias l='ls -lAhtr'
 alias paru='paru --skipreview'
 
+DOTDROP=~/dotfiles/dotdrop.sh
+export DOTDROP_PROFILE='fell'
+export DOTDROP_NOBANNER=
+if test -f "$DOTDROP"; then
+  alias dot="$DOTDROP"
+elif type "pip3" > /dev/null; then
+  cd ~/dotfiles && 
+  git submodule init && 
+  git submodule update --recursive --remote &&
+  pip3 install --user -r dotdrop/requirements.txt &&
+  dotdrop/bootstrap.sh &&
+  chmod u+x dotdrop.sh &&
+  ./dotdrop.sh install -f
+  source ~/.zshrc
+else
+  echo "Python3 not installed"
+fi
+
 export GPG_TTY=$TTY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
