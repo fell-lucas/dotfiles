@@ -7,8 +7,6 @@ fi
 
 source ~/.zplug/init.zsh
 
-zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
-
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
     echo; zplug install
@@ -20,6 +18,9 @@ zplug load
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+
+export BROWSER=/usr/bin/brave
+export FONTCONFIG_PATH=~/.config/fontconfig
 
 # ohmyzsh config
 export ZSH="$HOME/.oh-my-zsh"
@@ -46,7 +47,7 @@ alias perf_mode='echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufre
 alias save_mode='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias cpu_watch='watch -n.5 "cat /proc/cpuinfo | grep \"^[c]pu MHz\" && sensors"'
 alias l='ls -lAhtr'
-alias paru='paru --skipreview'
+# alias paru='paru --skipreview'
 
 DOTDROP=~/dotfiles/dotdrop.sh
 export DOTDROP_PROFILE='fell'
