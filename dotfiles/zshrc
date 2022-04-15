@@ -57,7 +57,7 @@ if test -f "$DOTDROP"; then
 elif type "pip3" > /dev/null; then
   cd ~/dotfiles && 
   git submodule init && 
-  git submodule update --recursive --remote &&
+  git submodule update dotdrop &&
   pip3 install --user -r dotdrop/requirements.txt &&
   dotdrop/bootstrap.sh &&
   chmod u+x dotdrop.sh &&
