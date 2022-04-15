@@ -1,5 +1,8 @@
 [user]
 	name = Lucas Alexandre Fell
 	email = 47724710+fell-lucas@users.noreply.github.com
+	signingkey = ED955362055459E0
 [init]
 	defaultBranch = main
+[commit]
+	gpgSign = true

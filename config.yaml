@@ -59,7 +59,6 @@ dotfiles:
   f_ksnip.conf:
     src: config/ksnip/ksnip.conf
     dst: ~/.config/ksnip/ksnip.conf
-    link: link
 profiles:
   fell:
     dotfiles:
