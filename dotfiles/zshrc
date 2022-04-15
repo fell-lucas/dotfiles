@@ -47,7 +47,7 @@ alias perf_mode='echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufre
 alias save_mode='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias cpu_watch='watch -n.5 "cat /proc/cpuinfo | grep \"^[c]pu MHz\" && sensors"'
 alias l='ls -lAhtr'
-# alias paru='paru --skipreview'
+alias parus='paru --skipreview'
 
 DOTDROP=~/dotfiles/dotdrop.sh
 export DOTDROP_PROFILE='fell'
@@ -67,6 +67,7 @@ else
   echo "Python3 not installed"
 fi
 
+# git commit signing
 export GPG_TTY=$TTY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
