@@ -51,6 +51,7 @@ alias cpu_watch='watch -n.5 "cat /proc/cpuinfo | grep \"^[c]pu MHz\" && sensors"
 alias l='ls -lAhtr'
 alias parus='paru --skipreview'
 
+# first time installing dotfiles
 DOTDROP=~/dotfiles/dotdrop.sh
 export DOTDROP_PROFILE='fell'
 export DOTDROP_NOBANNER=
@@ -77,3 +78,12 @@ export GPG_TTY=$TTY
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# flutter on arch linux stuff
+# android sdk on arch linux
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+alias sdkmanager='JAVA_HOME=/usr/lib/jvm/java-8-openjdk sdkmanager'
+alias f='JAVA_HOME=/usr/lib/jvm/java-8-openjdk .fvm/flutter_sdk/bin/flutter'
