@@ -20,7 +20,8 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.pub-cache/bin:$PATH
 
-export BROWSER=/usr/bin/brave
+export BROWSER=$(which brave)
+export CHROME_EXECUTABLE=$(which brave)
 export FONTCONFIG_PATH=~/.config/fontconfig
 
 # ohmyzsh config
