@@ -18,6 +18,7 @@ zplug load
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.pub-cache/bin:$PATH
 
 export BROWSER=/usr/bin/brave
 export FONTCONFIG_PATH=~/.config/fontconfig
