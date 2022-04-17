@@ -81,9 +81,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # flutter on arch linux stuff
 # android sdk on arch linux
+fvm=".fvm/flutter_sdk/bin"
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-alias sdkmanager='JAVA_HOME=/usr/lib/jvm/java-8-openjdk sdkmanager'
-alias f='JAVA_HOME=/usr/lib/jvm/java-8-openjdk .fvm/flutter_sdk/bin/flutter'
+export PATH=$PATH:$HOME/fvm/default/bin
+alias sdkmanager="JAVA_HOME=/usr/lib/jvm/java-8-openjdk sdkmanager"
+# use project flutter if exists, else use global
+[[ -d $fvm ]] && alias f="$fvm/flutter" || alias f="flutter"
