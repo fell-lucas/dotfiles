@@ -1,12 +1,16 @@
+Host *
+  ServerAliveInterval 60
+  ConnectTimeout 10
+  AddKeysToAgent yes
+  EscapeChar `
+  ControlMaster auto
+  ControlPersist 72000
+  ControlPath ~/.ssh/s/%C
 Host vm2
   HostName 193.123.99.43
   User opc
   Port 22
-  RemoteCommand byobu
-  RequestTTY yes
 Host vm1
   HostName 193.123.106.10
   User opc
   Port 22
-  RemoteCommand byobu
-  RequestTTY yes

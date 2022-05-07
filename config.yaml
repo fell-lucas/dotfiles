@@ -8,9 +8,9 @@ dotfiles:
     src: gitconfig
     dst: ~/.gitconfig
     link: link
-  f_zshrc:
-    src: zshrc
-    dst: ~/.zshrc
+  f_env.zsh:
+    src: env.zsh
+    dst: ~/.env.zsh
     link: link
   d_mpv:
     src: config/mpv
@@ -20,14 +20,6 @@ dotfiles:
     src: config/kitty
     dst: ~/.config/kitty
     link: link_children
-  d_config_rofi:
-    src: config/rofi
-    dst: ~/.config/rofi
-    link: link_children
-  d_config_picom:
-    src: config/picom
-    dst: ~/.config/picom
-    link: link_children
   d_paru:
     src: config/paru
     dst: ~/.config/paru
@@ -36,18 +28,6 @@ dotfiles:
     src: config/redshift
     dst: ~/.config/redshift
     link: link_children
-  d_fontconfig:
-    src: config/fontconfig
-    dst: ~/.config/fontconfig
-    link: link
-  f_p10k.zsh:
-    src: p10k.zsh
-    dst: ~/.p10k.zsh
-    link: link
-  f_config.lua:
-    src: config/lvim/config.lua
-    dst: ~/.config/lvim/config.lua
-    link: link
   f_tmux.conf:
     src: byobu/.tmux.conf
     dst: ~/.byobu/.tmux.conf
@@ -63,16 +43,11 @@ profiles:
   fell:
     dotfiles:
     - f_gitconfig
-    - f_zshrc
+    - f_env.zsh
     - d_mpv
     - d_kitty
-    - d_config_rofi
-    - d_config_picom
     - d_paru
     - d_redshift
-    - d_fontconfig
-    - f_p10k.zsh
-    - f_config.lua
     - f_tmux.conf
     - f_config
     - f_ksnip.conf

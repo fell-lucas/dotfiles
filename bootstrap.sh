@@ -1,15 +1,22 @@
 #!/bin/bash
 
-curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
-zsh -c "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
-zsh -c "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-zsh -c "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 git submodule init 
 git submodule update dotdrop 
 
-chsh -s "/usr/bin/zsh" 
-exec zsh
+if command -v pip3 >/dev/null 2>&1; then
+  cd ~/dotfiles && 
+  pip3 install --user -r dotdrop/requirements.txt &&
+  dotdrop/bootstrap.sh &&
+  chmod u+x dotdrop.sh &&
+  ./dotdrop.sh install -p fell
+else
+  echo "Python3 not installed"
+fi
+
+if command -v curl >/dev/null 2>&1; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+else
+  sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+fi
