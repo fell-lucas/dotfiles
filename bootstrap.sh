@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -fsSL https://get.pnpm.io/install.sh | sh -
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 git submodule init 
 git submodule update dotdrop 

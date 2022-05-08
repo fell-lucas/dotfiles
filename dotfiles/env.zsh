@@ -17,3 +17,6 @@ alias parus='paru --skipreview'
 # Misc
 fvm=".fvm/flutter_sdk/bin"
 [[ -d $fvm ]] && alias f="$fvm/flutter" || alias f="flutter"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
