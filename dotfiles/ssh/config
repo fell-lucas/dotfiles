@@ -1,16 +1,12 @@
-Host *
-  ServerAliveInterval 60
-  ConnectTimeout 10
-  AddKeysToAgent yes
-  EscapeChar `
-  ControlMaster auto
-  ControlPersist 72000
-  ControlPath ~/.ssh/s/%C
 Host vm2
   HostName 193.123.99.43
   User opc
-  Port 22
 Host vm1
   HostName 193.123.106.10
   User opc
-  Port 22
+Host plausible
+  HostName 193.123.100.59
+  User ubuntu
+Host kafka
+  HostName 193.123.106.255
+  User ubuntu
